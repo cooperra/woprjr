@@ -1,3 +1,6 @@
+woprjr is a fork of Jasper for site specific installation at LVL1 Hackerspace
+started in 2015. It's maintainer is Christopher Cprek.
+
 Jasper was originally created by Shubhro Saha and Charles Marsh in early 2014.
 In August 2014, the core development team has been joined by Jan Holthuis.
 

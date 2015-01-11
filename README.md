@@ -25,7 +25,7 @@ If you're still having trouble, the next place to look would be the new **[Googl
 
 ## Contact
 
-woprjr fork lead developer is Christopher Cprek and can be reached by email at [cprek@lvl1.org](mailto:cprek@lvl1.org)
+woprjr fork maintainer is Christopher Cprek and can be reached by email at [cprek@lvl1.org](mailto:cprek@lvl1.org)
 
 Jasper's core developers are [Shubhro Saha](http://www.princeton.edu/~saha/), [Charles Marsh](http://www.princeton.edu/~crmarsh/) and [Jan Holthuis](http://homepage.ruhr-uni-bochum.de/Jan.Holthuis/).  All of them can be reached by email at [saha@princeton.edu](mailto:saha@princeton.edu), [crmarsh@princeton.edu](mailto:crmarsh@princeton.edu) and [jan.holthuis@ruhr-uni-bochum.de](mailto:jan.holthuis@ruhr-uni-bochum.de) respectively. However, for technical support and other problems, please go through the channels mentioned above.
 
