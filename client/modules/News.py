@@ -8,7 +8,7 @@ WORDS = ["NEWS", "YES", "NO", "FIRST", "SECOND", "THIRD"]
 
 PRIORITY = 3
 
-URL = 'http://news.ycombinator.com'
+URL = 'http://news.google.com/?output=rss'
 
 
 class Article:
