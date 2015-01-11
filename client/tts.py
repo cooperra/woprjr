@@ -127,8 +127,8 @@ class EspeakTTS(AbstractTTSEngine):
 
     SLUG = "espeak-tts"
 
-    def __init__(self, voice='default+m3', pitch_adjustment=40,
-                 words_per_minute=160):
+    def __init__(self, voice='english-us+m2', pitch_adjustment=10,
+                 words_per_minute=140):
         super(self.__class__, self).__init__()
         self.voice = voice
         self.pitch_adjustment = pitch_adjustment
