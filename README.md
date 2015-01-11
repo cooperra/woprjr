@@ -1,7 +1,9 @@
-jasper-client
+woprjr
 =============
 
 [![Build Status](https://travis-ci.org/jasperproject/jasper-client.svg?branch=master)](https://travis-ci.org/jasperproject/jasper-client) [![Coverage Status](https://img.shields.io/coveralls/jasperproject/jasper-client.svg)](https://coveralls.io/r/jasperproject/jasper-client)
+
+woprjr is a site specific fork of the Jasper voice computing platform for the WOPR hardware installation at LVL1 hackerspace. Modifications are made for custom hardware and hackerspace specific functionality.
 
 Client code for the Jasper voice computing platform. Jasper is an open source platform for developing always-on, voice-controlled applications.
 
@@ -17,11 +19,13 @@ Thanks in advance for any and all work you contribute to Jasper!
 
 ## Support
 
-If you run into an issue or require technical support, please first look through the closed and open **[GitHub Issues](https://github.com/jasperproject/jasper-client/issues)**, as you may find a solution there (or some useful advice, at least).
+If you run into an issue or require technical support, please first look through the closed and open **[GitHub Issues](https://github.com/ccprek/woprjr/issues)**, as you may find a solution there (or some useful advice, at least).
 
 If you're still having trouble, the next place to look would be the new **[Google Group support forum](https://groups.google.com/forum/#!forum/jasper-support-forum)**. If your problem remains unsolved, feel free to create a post there describing the issue, the steps you've taken to debug it, etc.
 
 ## Contact
+
+woprjr fork lead developer is Christopher Cprek and can be reached by email at [cprek@lvl1.org](mailto:cprek@lvl1.org)
 
 Jasper's core developers are [Shubhro Saha](http://www.princeton.edu/~saha/), [Charles Marsh](http://www.princeton.edu/~crmarsh/) and [Jan Holthuis](http://homepage.ruhr-uni-bochum.de/Jan.Holthuis/).  All of them can be reached by email at [saha@princeton.edu](mailto:saha@princeton.edu), [crmarsh@princeton.edu](mailto:crmarsh@princeton.edu) and [jan.holthuis@ruhr-uni-bochum.de](mailto:jan.holthuis@ruhr-uni-bochum.de) respectively. However, for technical support and other problems, please go through the channels mentioned above.
 
