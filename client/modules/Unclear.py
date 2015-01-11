@@ -1,11 +1,12 @@
 # -*- coding: utf-8-*-
 from sys import maxint
 import random
+import jasperpath
+import os
 
 WORDS = []
 
 PRIORITY = -(maxint + 1)
-
 
 def handle(text, mic, profile):
     """
@@ -24,7 +25,11 @@ def handle(text, mic, profile):
 
     message = random.choice(messages)
 
-    mic.say(message)
+    # Respond with random soundboard file
+    responses = os.listdir(jasperpath.data('audio', 'soundboards'))
+    response = random.choice(responses)
+
+    mic.speaker.play(jasperpath.data('audio', 'soundboards', response))
 
 
 def isValid(text):
