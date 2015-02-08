@@ -10,6 +10,7 @@ import pyaudio
 import alteration
 import jasperpath
 
+from sign import Sign
 
 class Mic:
 
@@ -35,6 +36,7 @@ class Mic:
                           "can usually be safely ignored.")
         self._audio = pyaudio.PyAudio()
         self._logger.info("Initialization of PyAudio completed.")
+        self.signs = Sign()
 
     def __del__(self):
         self._audio.terminate()
@@ -258,5 +260,9 @@ class Mic:
     def say(self, phrase,
             OPTIONS=" -vdefault+m3 -p 40 -s 160 --stdout > say.wav"):
         # alter phrase before speaking
+        print(phrase)
+        signphrase = phrase.encode('ascii', errors='backslashreplace')
+        self.signs.display(signphrase)
         phrase = alteration.clean(phrase)
         self.speaker.say(phrase)
+        

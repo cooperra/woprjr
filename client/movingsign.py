@@ -264,19 +264,19 @@ class MovingSign(object):
         """
         self.rcv_addr = receiver
 
-    def set_text_mode(self, display_mode):
+    def set_display_mode(self, display_mode):
         """
         Set display mode
         """
         self.display_mode = display_mode
 
-    def set_text_speed(self, display_speed):
+    def set_display_speed(self, display_speed):
         """
         Set display speed
         """
         self.display_speed = display_speed
 
-    def set_text_align(self, align):
+    def set_display_align(self, align):
         """
         Set display speed
         """
@@ -445,7 +445,7 @@ class MovingSign(object):
         mesg = self.cmd_write_special(b'E' + display_times)
         return mesg
 
-    def set_display_mode(self, display_time):
+    def set_display_mode(self, display_mode):
         """
         Set display mode (1 bytes)
         Subcontrol command: 'F'
