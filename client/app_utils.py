@@ -4,6 +4,7 @@ from email.MIMEText import MIMEText
 import urllib2
 import re
 from pytz import timezone
+from client.mic import Mic
 
 
 def sendEmail(SUBJECT, BODY, TO, FROM, SENDER, PASSWORD, SMTP_SERVER):
@@ -126,3 +127,21 @@ def isPositive(phrase):
         phrase -- the input phrase to-be evaluated
     """
     return bool(re.search(r'\b(sure|yes|yeah|go)\b', phrase, re.IGNORECASE))
+
+def askPermission(mic):
+    """Ideas shamelessly stolen from MPDControl module.
+
+    The idea is to ask using an uncluttered vocabulary."""
+    phrases = ["YES", "SURE", "YEAH", "GO", "NO", "NOT", "DON'T", "STOP", "END"]
+    our_stt_engine = mic.active_stt_engine.get_instance('permission', phrases)
+    our_mic = Mic(mic.speaker,
+                  mic.passive_stt_engine,
+                  our_stt_engine)
+
+    input = our_mic.activeListen()
+    if isPositive(input):
+        return True
+    elif isNegative(input):
+        return False
+    else:
+        return None
