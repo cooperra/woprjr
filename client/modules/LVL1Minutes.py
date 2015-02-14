@@ -1,10 +1,12 @@
 # -*- coding: utf-8-*-
 import urllib2
+from client import app_utils
 import re
 from bs4 import BeautifulSoup
 from bs4.element import Comment
 
-WORDS = ["FIRST_TIME", "VISITOR", "INFO", \
+WORDS = ["YES", "SURE", "YEAH", "NO", "DON'T", "STOP", \
+         "FIRST_TIME", "VISITOR", "INFO", \
          "EQUIPMENT", "AND", "SUPPLIES", "WANTED", "NEEDED", \
          "SPACE", "UPGRADE", "UPGRADES", \
          "DOWNGRADE", "DOWNGRADES", \
@@ -107,11 +109,17 @@ def handle(text, mic, profile):
         profile -- contains information related to the user (e.g., phone
                    number)
     """
-    mic.say("Checking the minutes...")
-    sections = getMinutesSections()
     section_title = getMatchingSectionTitle(text)
-    section = sections[section_title.lower()]
-    mic.say(section.to_speakable_string())
+    def handleResponse(text):
+        if app_utils.isPositive(text):
+            mic.say("Checking the minutes...")
+            sections = getMinutesSections()
+            section = sections[section_title.lower()]
+            mic.say(section.to_speakable_string())
+        else:
+            mic.say("Nevermind.")
+    mic.say("Would you like to hear %s?" % section_title)
+    handleResponse(mic.activeListen())
 
 def isValid(text):
     """
