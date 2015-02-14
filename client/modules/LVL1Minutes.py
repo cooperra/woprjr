@@ -2,6 +2,7 @@
 import urllib2
 import re
 from bs4 import BeautifulSoup
+from bs4.element import Comment
 
 WORDS = ["FIRST_TIME", "VISITOR", "INFO", \
          "EQUIPMENT", "AND", "SUPPLIES", "WANTED", "NEEDED", \
@@ -29,6 +30,9 @@ class Section:
 
     def to_speakable_string(self):
         def stringify(elem):
+            if type(elem) is Comment:
+                # Ignore HTML comments
+                return ''
             if "get_text" in dir(elem):
                 return elem.get_text().strip()
             else:
